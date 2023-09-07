@@ -1,7 +1,11 @@
+{{ $script := resources.Get "app.js" | resources.Minify | resources.Fingerprint }}
+
 <!doctype html>
-<html dir="ltr" lang="it" x-data="{}">
-   {{- partial "head.html" . -}}
-   <body class="light">
+<html dir="ltr" lang="it">
+   <head>
+      {{- partial "head-tags.html" . -}}
+   </head>
+   <body class="light absolute inset-0">
       {{- partial "sidebar-button.html" . -}}
       <aside
          id="sidebar"
@@ -11,5 +15,7 @@
          {{- partial "sidebar.html" . -}}
       </aside>
       <main class="p-4 sm:ml-64">{{- partial "content.html" . -}}</main>
+
+      <script src="{{ $script.RelPermalink }}"></script>
    </body>
 </html>

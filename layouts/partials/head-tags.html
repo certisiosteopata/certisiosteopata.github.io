@@ -1,0 +1,20 @@
+{{ $style := resources.Get "app.css" | resources.Minify | resources.Fingerprint }}
+
+<title>Marco Certisi | Osteopata</title>
+<meta charset="UTF-8" />
+<meta name="author" content="Marco Certisi" />
+<meta
+   name="description"
+   content="Osteopata Biella - Terapia manuale olistica per ritrovare e mantenere il tuo stato di salute e benessere"
+/>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+
+<link rel="shortcut icon" href="favicons/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png" />
+<link rel="canonical" href="https://marcocertisiosteopata.it/" />
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+
+<link href="{{ $style.RelPermalink }}" rel="stylesheet" />
