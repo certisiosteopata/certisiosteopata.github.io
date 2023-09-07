@@ -1,0 +1,15 @@
+<!doctype html>
+<html dir="ltr" lang="it" x-data="{}">
+   {{- partial "head.html" . -}}
+   <body class="light">
+      {{- partial "sidebar-button.html" . -}}
+      <aside
+         id="sidebar"
+         class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 border-r-2 border-gray-100"
+         aria-label="Sidebar"
+      >
+         {{- partial "sidebar.html" . -}}
+      </aside>
+      <main class="p-4 sm:ml-64">{{- partial "content.html" . -}}</main>
+   </body>
+</html>
