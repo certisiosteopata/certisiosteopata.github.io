@@ -1,38 +1,20 @@
 <div>
-   <!-- hero -->
+
+   <div id="home" class="pb-8" x-intersect="mouseClick(0)">
+      {{- partial "home.html" . -}}
+   </div>
+
    <div class="sm:hidden flex flex-col items-center mt-10">{{- partial "hero.html" . -}}</div>
 
-   <div class="w-full relative">
-      <div class="text-3xl absolute">
-         <span>
-            Un osteopata è solo un ingegnere umano, <br>
-            che dovrebbe capire tutte le regole <br>
-            che governano il suo motore <br>
-            e quindi padroneggiare la malattia
-         </span>
-         <span>
-            A. T. Still
-         </span>
-      </div>
-      <img src="/images/colonna.jpg" alt="background" class="absolute w-28">
-      <img src="/images/vector-bg.svg" alt="background" class="w-full">
+   <div id="osteopatia" class="p-2 py-8" x-intersect="mouseClick(1)">{{- partial "osteopatia.html" . -}}</div>
+
+   <div id="visita-e-trattamento" class="p-2 py-8" x-intersect="mouseClick(2)">
+      {{- partial "visita.html" . -}}
    </div>
 
-   <div id="osteopatia" class="p-10">
-      {{- partial "osteopatia.html" . -}}
-   </div>
-
-   <div class="py-80"></div>
-
-   <div id="visita-e-trattamento" class="p-10">
-      Nella prima fase della visita, si dedica del tempo alla raccolta di informazioni anamnestiche fondamentali per comprendere la condizione del paziente e individuare eventuali controindicazioni al trattamento. Successivamente, il paziente viene sottoposto a test medici specifici che servono a confermare le ipotesi emerse durante l'anamnesi.
-      Durante questa fase valutativa, cerchiamo di determinare se il dolore del paziente sia legato alla postura o ad altre eventuali condizioni, utilizzando anche la competenza palpatoria per identificare aree di tensione o disfunzione.
-      Una volta completata questa fase di valutazione, si sviluppa un piano di trattamento mirato specificamente alle esigenze del paziente, tenendo conto di quanto emerso durante la visita.
-      Nei successivi appuntamenti, monitoriamo i progressi del paziente e adattiamo i trattamenti di conseguenza. 
-      L’obiettivo principale è fornire un'assistenza personalizzata ed efficace per migliorare il benessere del paziente nel lungo termine.
-   </div>
-
-   <div id="sede-e-contatti" class="p-10">
+   <div id="sede-e-contatti" class="p-2 py-8" x-intersect="mouseClick(3)">
       {{- partial "sede.html" . -}}
+      <div class="py-8"></div>
+      {{- partial "contatti.html" . -}}
    </div>
 </div>

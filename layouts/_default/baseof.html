@@ -1,7 +1,7 @@
 {{ $script := resources.Get "app.js" | resources.Minify | resources.Fingerprint }}
 
 <!doctype html>
-<html dir="ltr" lang="it">
+<html dir="ltr" lang="it" class="scroll-smooth" x-data="handle_menu_hover(0, 0)">
    <head>
       {{- partial "head-tags.html" . -}}
    </head>
